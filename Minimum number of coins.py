@@ -19,14 +19,17 @@ for c in coins:
             min_number = min(coins_required[amount], 1 + (coins_required[cost_left]))
             #print(amount,coins_required[amount], coins_required[cost_left])
             coins_required[amount] = min_number
-            if(min_number != 100 and which_coins[amount] != -1):
+            if(min_number < 100 and which_coins[amount] == -1):
                 which_coins[amount] = count
 
-print(coins_required)
 
 print("The minimum coins required is", coins_required[N])
 coins_used = []
-#for i in range(0, N+1):
-    #coins_used = which_coins[]
+value = which_coins[N]
+print(value)
+print(which_coins)
+print("The coins used are:")
+print(''.join(coins_used))
+
 
 
